@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    {{ turbo() }}
+  </head>
+  <body
+    style=" background-color:black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            text-align: center;">
+    <span id="countdown">
+      <span style="color:white;font-size:60px">{{ now }} - Objetivo - 1/8/2022<br></span>
+      <span style="color:blue;font-size:150px"> {{ days }}</span>
+      <span style="color:grey;font-size:80px">días corridos</span>
+      <span style="color:violet;font-size:100px">{{ hours }}:{{ minutes }}:{{ seconds }}<br></span>    
+      <span style="color:orange;font-size:250px"> {{ w_days }}</span>
+      <span style="color:grey;font-size:120px">días hábiles<br></be></span>
+      <span style="color:red;font-size:280px">{{ w_hours }}:{{ w_minutes }}:{{ w_seconds }}</span>
+      <span style="color:grey;font-size:20px"><br>horas laborables 10 a 18 (GMT -3)</span>
+    </span>
+  </body>
+</html>
