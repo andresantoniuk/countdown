@@ -20,10 +20,8 @@ turbo = Turbo(app)
 
 # Fecha objetivo
 end_date = datetime(2022,8,1)
-
 myset = rruleset()
-myrule=rrule(freq=DAILY, until=end_date, byweekday=[MO,TU,WE,TH,FR], byhour=0, byminute=0, bysecond=0, cache=True)
-myset.rrule(myrule)
+
 
 #Feriados
 myset.exdate(datetime(2022,2,28))
@@ -47,6 +45,9 @@ def index():
 
 @app.context_processor
 def inject_countdown():
+
+    myrule=rrule(freq=DAILY, until=end_date, byweekday=[MO,TU,WE,TH,FR], byhour=0, byminute=0, bysecond=0, cache=True)
+    myset.rrule(myrule)
 
     tnow = datetime.now()
 
